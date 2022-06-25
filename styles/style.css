@@ -83,6 +83,7 @@ select {
 
 .testimonialtop {
   font-family: "Varela Round", sans-serif;
+  color: hsl(0deg, 0%, 35%);
   background: hsl(0deg, 0%, 100%);
   border-radius: 25px 25px 0px 0px;
   padding: 2em;
@@ -94,7 +95,7 @@ select {
   text-align: center;
   color: hsl(0deg, 0%, 100%);
   border-radius: 0px 0px 25px 25px;
-  background: linear-gradient(hsl(0deg, 0%, 100%) 30%, hsl(238deg, 66%, 64%) 0%);
+  background: linear-gradient(hsl(0deg, 0%, 100%) 28%, hsl(238deg, 66%, 64%) 0%);
 }
 .testimonialbottom p,
 .testimonialbottom a {

@@ -13,6 +13,7 @@
 
 .testimonialtop {
   font-family: $typenormal;
+  color: $halftone;
   background: $neutral;
   border-radius: 25px 25px 0px 0px;
   padding: 2em;
@@ -24,7 +25,7 @@
   text-align: center;
   color: $neutral;
   border-radius: 0px 0px 25px 25px;
-  background: linear-gradient($neutral 30%, $highlight 0%);
+  background: linear-gradient($neutral 28%, $highlight 0%);
 
   p,
   a {
