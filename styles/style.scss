@@ -1,6 +1,7 @@
-@import './main/resets';
-@import './main/testimonial';
+@import "./main/resets";
+@import "./main/testimonial";
+@import "./main/variables/colors";
 
-
-
-
+body {
+  background: $bg;
+}
