@@ -1,0 +1,94 @@
+@import "./variables/colors";
+@import "./variables/type";
+@import "./variables/spacing";
+
+.gallery {
+  position: relative;
+  max-width: 1024px;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+  list-style-type: none;
+
+  &--picca {
+  }
+
+  &--picca:hover {
+    background-color: yellow;
+    button {
+      opacity: 1;
+      transition: 0.35s ease-in-out;
+    }
+    img {
+      opacity: 0;
+      transition: opacity 0.35s ease-in-out;
+    }
+  }
+
+  button {
+    opacity: 0;
+  }
+  .button1 {
+    position: absolute;
+    top: 25%;
+    left: 12%;
+  }
+  .button2 {
+    position: absolute;
+    top: 15%;
+    left: 47%;
+  }
+  .button3 {
+    position: absolute;
+    top: 11%;
+    left: 81%;
+  }
+  .button4 {
+    position: absolute;
+    top: 62%;
+    left: 12%;
+  }
+  .button5 {
+    position: absolute;
+    top: 65%;
+    left: 47%;
+  }
+  .button6 {
+    position: absolute;
+    top: 65%;
+    left: 81%;
+  }
+}
+
+// img {
+//   max-height: 100%;
+//   min-width: 100%;
+//   object-fit: cover;
+
+//   --pic* {
+//     aspect-ratio: auto;
+//   }
+
+// for 2 columns
+@media only screen and (max-width: 700px) {
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+}
+
+// for 1 column
+@media only screen and (max-width: 400px) {
+  .gallery {
+    min-width: 375px;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+    grid-template-rows: repeat(8, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+}
