@@ -221,6 +221,9 @@ select {
   font-family: "Varela Round", sans-serif;
   color: hsl(0deg, 0%, 100%);
 }
+.socials .button:hover {
+  background: hsl(0deg, 0%, 100%);
+}
 .socials li {
   padding-left: 0.5em;
   padding-top: 0.5em;
@@ -235,20 +238,39 @@ select {
 .socials i {
   padding-right: 1em;
 }
-.socials-blog {
+.socials #socials-blog {
+  position: relative;
+  bottom: 5fr;
   background: hsl(2deg, 64%, 67%);
+  transition: 1s, transform 0.5s;
 }
-.socials-facebook {
+.socials #socials-facebook {
+  position: relative;
+  bottom: 4fr;
   background: hsl(221deg, 44%, 41%);
+  transition: 1s, transform 0.5s;
 }
-.socials-twitter {
+.socials #socials-twitter {
+  position: relative;
+  bottom: 3fr;
   background: hsl(196deg, 100%, 46%);
+  transition: 1s, transform 0.5s;
 }
-.socials-github {
+.socials #socials-linkedin {
+  position: relative;
+  bottom: 2fr;
   background: hsl(199deg, 100%, 36%);
+  transition: 1s, transform 0.5s;
 }
-.socials-linkedin {
+.socials #socials-github {
+  position: relative;
+  bottom: 1fr;
   background: hsl(0deg, 0%, 20%);
+  transition: 1s, transform 0.5s;
+}
+
+.button:hover {
+  background: hsl(0deg, 0%, 100%);
 }
 
 body {

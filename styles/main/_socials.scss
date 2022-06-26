@@ -30,6 +30,9 @@
   list-style: none;
   font-family: $typenormal;
   color: $neutral;
+  .button:hover {
+    background: $neutral;
+  }
   li {
     padding-left: 0.5em;
     padding-top: 0.5em;
@@ -45,20 +48,49 @@
     padding-right: 1em;
   }
 
-  &-blog {
-    background: $blog;
-  }
-  &-facebook {
-    background: $facebook;
-  }
+  #socials-blog {
+    position: relative;
+    // right: 1.5em;
+    bottom: 5fr;
 
-  &-twitter {
+    background: $blog;
+    // transform: translateX(95%);
+    transition: 1s, transform 0.5s;
+  }
+  #socials-facebook {
+    position: relative;
+    // right: 1.4em;
+    bottom: 4fr;
+    background: $facebook;
+    // transform: translateX(95%);
+    transition: 1s, transform 0.5s;
+  }
+  #socials-twitter {
+    position: relative;
+    // right: 1.45em;
+    bottom: 3fr;
     background: $twitter;
+    // transform: translateX(95%);
+    transition: 1s, transform 0.5s;
   }
-  &-github {
-    background: $git;
-  }
-  &-linkedin {
+  #socials-linkedin {
+    position: relative;
+    // right: 1.5em;
+    bottom: 2fr;
     background: $linkedin;
+    // transform: translateX(95%);
+    transition: 1s, transform 0.5s;
   }
+  #socials-github {
+    position: relative;
+    // right: 1.35em;
+    bottom: 1fr;
+    background: $git;
+    // transform: translateX(95%);
+    transition: 1s, transform 0.5s;
+  }
+}
+
+.button:hover {
+  background: $neutral;
 }
