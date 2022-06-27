@@ -1,0 +1,155 @@
+@import "./variables/colors";
+@import "./variables/type";
+@import "./variables/spacing";
+
+:root {
+  --min-card-width: 300px;
+  --card-border-radius: 5px;
+}
+
+body {
+  // min-width: 400px;
+  overflow-x: auto;
+  max-width: 1125px;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.gallery {
+  display: grid;
+  grid-gap: 1rem;
+
+  > div {
+    aspect-ratio: 1 /1;
+    background-image: var(--card-bg-url);
+    background-position: center;
+    background-size: cover;
+    border-radius: var(--card-border-radius);
+
+    > div {
+      height: 100%;
+      border-radius: var(--card-border-radius);
+
+      display: grid;
+      place-items: center;
+
+      background: blue;
+
+      opacity: 0;
+      > * {
+        opacity: 0;
+        transition: opacity 0.5s;
+      }
+      transition: opacity 0.5s;
+      &:hover {
+        opacity: 0.8;
+        > * {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+@supports (width: min(var(--min-card-width), 100%)) {
+  .gallery {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(min(var(--min-card-width), 100%), 1fr)
+    );
+  }
+}
+
+// padding: 1em;
+// position: relative;
+// max-width: 1125px;
+// display: grid;
+// grid-gap: 1rem;
+// grid-template-columns: repeat(3, minmax(200px, 1fr));
+// grid-template-rows: repeat(2, 1fr);
+// list-style-type: none;
+
+// img {
+//   border-radius: 5px;
+//   object-fit: cover;
+//   aspect-ratio: 1/1;
+// }
+// &--picca {
+//   border-radius: 5px;
+//   transition: opacity 1s;
+// }
+
+// &--picca:hover {
+//   background-color: $highlight;
+
+//   button {
+//     opacity: 1;
+//     transition: 1s ease-out;
+//   }
+//   img {
+//     opacity: 0;
+//     transition: opacity 1s ease-out;
+//   }
+// }
+
+// button {
+//   font-family: $typelight;
+//   opacity: 0;
+//   border-radius: 5px;
+// }
+// // notitie voor de docent: ik krijg maar niet de buttons vast op de juiste plek mee
+// // wanneer er verkleind/vergroot wordt.
+// .button1 {
+//   position: absolute;
+//   left: calc(12% - 6px);
+//   top: calc(12% - 6px);
+// }
+// .button2 {
+//   position: absolute;
+//   left: calc(45% - 6px);
+//   top: calc(12% - 6px);
+// }
+// .button3 {
+//   position: absolute;
+//   left: calc(78% - 6px);
+//   top: calc(12% - 6px);
+// }
+// .button4 {
+//   position: absolute;
+//   left: calc(12% - 6px);
+//   top: calc(62% - 6px);
+// }
+// .button5 {
+//   position: absolute;
+//   left: calc(45% - 6px);
+//   top: calc(62% - 6px);
+// }
+// .button6 {
+//   position: absolute;
+//   left: calc(78% - 6px);
+//   top: calc(62% - 6px);
+// }
+// }
+
+// for 2 columns
+// @media only screen and (max-width: 768px) {
+//   .gallery {
+//     display: grid;
+//     grid-template-columns: repeat(2, minmax(200px, 1fr));
+//     grid-template-rows: repeat(3, 1fr);
+//     grid-column-gap: 10px;
+//     grid-row-gap: 10px;
+//   }
+// }
+
+// for 1 column
+// @media only screen and (max-width: 426px) {
+//   .gallery {
+//     min-width: 375px;
+//     display: grid;
+//     grid-template-columns: repeat(1, minmax(200px, 1fr));
+//     grid-template-rows: repeat(6, 1fr);
+//     grid-column-gap: 10px;
+//     grid-row-gap: 10px;
+//   }
+// }
