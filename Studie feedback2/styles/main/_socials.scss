@@ -1,0 +1,88 @@
+@import "./variables/colors";
+@import "./variables/type";
+@import "./variables/spacing";
+
+.icon::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.fa-solid fa-laptop-code::before {
+  content: "\f5fc";
+}
+.fa-brands fa-twitter::before {
+  content: "\f099";
+}
+.fa-brands fa-linkedin-in::before {
+  content: "\f0e1";
+}
+.fa-brands fa-facebook::before {
+  content: "\f39e";
+}
+.fa-brands fa-github::before {
+  content: "\f09b";
+}
+
+.socials-blog:hover {
+  background-color: black;
+}
+
+.socials {
+  position: absolute;
+  left: 100%;
+  list-style: none;
+  font-family: $typenormal;
+  color: $neutral;
+  transform: translate(-25%, -50%);
+
+  li {
+    padding-left: 0.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    width: 250px;
+  }
+  li:hover {
+    transform: translate(-85%);
+  }
+  a {
+    text-decoration: none;
+    color: $neutral;
+    padding-top: 0.5em;
+    padding-left: 0;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  i {
+    padding-right: 1em;
+  }
+
+  #socials-blog {
+    position: relative;
+    background: $blog;
+    transition: 1s, transform 0.5s;
+  }
+  #socials-facebook {
+    position: relative;
+    background: $facebook;
+    transition: 1s, transform 0.5s;
+  }
+  #socials-twitter {
+    position: relative;
+    background: $twitter;
+    transition: 1s, transform 0.5s;
+  }
+  #socials-linkedin {
+    position: relative;
+    background: $linkedin;
+    transition: 1s, transform 0.5s;
+  }
+  #socials-github {
+    position: relative;
+    background: $git;
+    transition: 1s, transform 0.5s;
+  }
+}
